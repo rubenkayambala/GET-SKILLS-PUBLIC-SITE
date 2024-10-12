@@ -1,0 +1,411 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de la barre de navigation */
+.navbar{
+    background-color: #333;
+    padding: 1px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar .links ul{
+    display: flex;
+}
+
+.navbar .links ul li{
+    list-style: none;
+    margin-right: 20px;
+}
+
+.navbar .links ul li a{
+    font-size: 15px;
+    color: #E0FFFF;
+}
+
+.navbar .text{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+.navbar .text p{
+    color: #fff;
+    margin-right: 5px;
+}
+
+.navbar .text .icon{
+    color: #E0FFFF;
+}
+
+header{
+    background-color: #FFF;
+    box-shadow: 0 0 3px 0 #000;
+    padding: 10px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav div{
+    display: flex;
+}
+
+header nav div ul{
+    display: flex;
+}
+
+header nav div ul li{
+    list-style: none;
+    margin-right: 20px;
+}
+
+header nav div ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header nav .btn{
+    background-color: #0051ff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+/* Style de la section d'accueil */
+.accueil{
+    background-image: url(images/Back_One.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #000000ad;
+    text-align: center;
+}
+
+.accueil .container{
+    padding: 20px 0;
+}
+
+.accueil .container h1{
+    color: #fff;
+    text-align: center;
+    font-size: 90px;
+    margin-top: 16%;
+}
+
+.accueil .container .btn{
+    background-color: #0051ff;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+
+/* Style de la section d'à propos */
+.about{
+    background-color: #f5f5f5;
+}
+
+.about .container{
+    padding: 25px 0;
+}
+
+.about .container h3{
+    font-size: 28px;
+    text-align: center;
+    color: #000;
+}
+
+h3 div{
+    width: 40px;
+    height: 3px;
+    background-color: #ff0000;
+    margin-left: 640px;
+    border-radius: 10px;
+    margin-top: 3px;
+}
+
+.about .container .row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about .container .row .infos h5{
+    color: #ff0000;
+    font-size: 22px;
+}
+
+.about .container .row .infos .btn{
+    background-color: #ff0000;
+    color: #fff;
+}
+
+
+/* Style de la section de nos formations */
+.formations .container .row #CourseBox p{
+    font-size: 14px;
+}
+
+.formations .container .row #CourseBox .btn{
+    background-color: #ff0000;
+    color: #fff;
+}
+
+
+/* Style de la section rejoindre */
+.rejoindre{
+    background-color: #333;
+}
+
+.rejoindre .container{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.rejoindre .container h6{
+    font-size: 35px;
+    color: #fff;
+}
+
+.rejoindre .container .btn{
+    background-color: #ff0000;
+    color: #fff;
+}
+
+hr{
+    color: #f5f5f5;
+}
+
+/* Style du footer */
+
+footer{
+    background-color: #333;
+}
+
+footer .container .row p{
+    color: #f5f5f5;
+    text-align: center;
+}
+
+footer .container .row div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .container .row div ul{
+    display: flex;
+}
+
+footer .container .row div ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+footer .container .row div ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Le formulaire de contact */
+.wrapper{
+    position: absolute;
+    width: 600px;
+    height: 630px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    backdrop-filter: blur(80px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    left: 30em;
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease ,height .2s ease;
+}
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height: 480px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 30px;
+}
+
+.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #ff0000;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper .icon-close img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.wrapper .form-box h2{
+font-size: 2em;
+color: #000;
+text-align: center;
+}
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid #ff0000;
+    margin: 30px 0;
+}
+
+.wrapper .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.wrapper .input-box input:focus~label,
+.wrapper .input-box input:valid~label{
+    top: -5px;
+}
+
+.wrapper .input-box textarea:focus~label,
+.wrapper .input-box textarea:valid~label{
+    top: -5px;
+    border: none;
+}
+
+.wrapper .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.wrapper .input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #000;
+    line-height: 57px;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #ff0000;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Styles pour la boîte de dialogue personnalisée */
+.custom-alert{
+    display: none;
+    position: fixed;
+    text-align: center;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.custom-alert h2{
+    color: #ff0000;
+    font-size: 25px;
+}
+
+.custom-alert button{
+    margin-top: 10px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: #fff;
+    width: 35%;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#myBtn{
+display: none;
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+border: none;
+outline: none;
+background-color: #ff0000;
+color: #fff;
+cursor: pointer;
+padding: 10px 20px;
+border-radius: 50px;
+font-size: 18px;
+}
+#myBtn:hover{
+    background-color: #ff0000;
+}

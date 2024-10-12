@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons-1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="asset/style.css">
+    <title>Get Skills CLass | Vitrine</title>
+</head>
+
+<style>
+
+    
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <div class="links">
+                <ul>
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="text">
+                <p class="icon"><i class="bi bi-house-fill"></i></p>
+                <p>Kinshasa, institut réligion, Unikin</p>
+            </div>
+            <div class="text">
+                <p class="icon"><i class="bi bi-envelope-fill"></i></p>
+                <p>getskillsclass@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="asset/images/logo_get_skills_class.png" alt="" width="70px"></a>
+                <div>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#about">A propos</a></li>
+                        <li><a href="formations#">Formations</a></li>
+                        <li><a href="souvenirs#">Souvenir</a></li>
+                        <li><a href="#rejoindre">Rejoindre</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="custom-alert" id="customAlert">
+        <h2>Notification</h2>
+        <hr>
+        <p id="alertMessage"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+
+    <section class="accueil" style="height: 84.1vh;">
+        <div class="container">
+            <h1>GET SKILLS <span style="color: #ff0000;">CLASS</span></h1>
+            <a href="#" class="btn btnLogin-popup">Rejoindre</a>
+        </div>
+    </section>
+
+    <div class="wrapper">
+        <a href="#" class="icon-close" aria-label="icone close"><i class="bi bi-x"></i></a>
+            
+        </span>
+        <div class="form-box" id="myForm">
+            <h2>inscrivez-vous</h2>
+            <p style="text-align: center; color: #000;">Suivez ces étapes pour rejoindre la GET SKILLS CLASS</p>
+            <form action="#">
+                <div class="input-box"> 
+                    <input type="text" name="name" id="name" autocomplete="name" required>
+                    <label for="name">Nom</label>
+                </div>
+                <div class="input-box"> 
+                    <input type="text" name="midname" id="midname" autocomplete="midname" required>
+                    <label for="midname">Post-nom</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="first" id="first" autocomplete="first" required>
+                    <label for="first">Prénom</label>
+                </div>
+                <div class="input-box"> 
+                    <input type="date" name="birth" id="birth" autocomplete="birth" required>
+                    <label for="birth">Date de naissance</label>
+                </div>
+                <div class="input-box"> 
+                    <input type="text" name="adresse" id="adresse" autocomplete="adresse" required>
+                    <label for="adresse">Adresse actuelle</label> 
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" id="email" autocomplete="email" required>
+                    <label for="email">Adresse Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="num" id="num" autocomplete="num" required>
+                    <label for="num">Téléphone</label>
+                </div>
+                <button type="submit" class="btn">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h3>
+                About us
+                <div></div>
+            </h3>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="asset/images/logo_get_skills_class.png" alt="">
+                </div>
+                <div class="col-lg-6 infos">
+                    <h5>Qui sommes nous ?</h5>
+                    <p>
+                        <strong>GET SKILLS CLASS</strong> est un centre de Formations <br>
+                        professionnel fondé pour former et accompagner les jeunes dans <br>
+                        le domaine des Nouvelles Technologies de l'Information et de la <br>
+                        Communication. 
+                    </p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="formations" id="formations">
+        <div class="container" style="padding: 20px 0;">
+            <h3 style="text-align: center;">
+                Nos formations
+                <div></div>
+            </h3>
+            <div class="row" style="padding: 20px 0;">
+                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-left: 25px; margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" width="100%">
+                    <div><h6>Niveau 1</h6></div>
+                    <h6>Titre</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                </div>
+                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" width="100%">
+                    <div><h6>Niveau 2</h6></div>
+                    <h6>Titre</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                </div>
+                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" width="100%">
+                    <div><h6>Niveau 3</h6></div>
+                    <h6>Titre</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                </div>
+                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-left: 25px; margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" width="100%">
+                    <div><h6>Niveau 4</h6></div>
+                    <h6>Titre</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                </div>
+                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" width="100%">
+                    <div><h6>Niveau 5</h6></div>
+                    <h6>Titre</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                </div>
+                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" width="100%">
+                    <div><h6>Niveau 6</h6></div>
+                    <h6>Titre</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="souvenirs" id="souvenirs">
+        <div class="container" style="padding: 5px 0;">
+            <h3 style="text-align: center; margin-top: 10px;">
+                Nos souvenirs
+                <div></div>
+            </h3>
+            <div class="row">
+                <div class="col-lg-6 shadow" id="CourseBox" style="padding: 20px; width: 49%; margin-right: 20px;  margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" style="width: 100%; height: 350px; object-fit: cover; border-radius: 10px;">
+                    <h6 style="color: #000;">Première promotion</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="Albums/promotion1.html" class="btn" style="background-color: #ff0000; color: #fff;">Voir l'album</a>
+                </div>
+                <div class="col-lg-6 shadow" id="CourseBox" style="padding: 20px; width: 49%; margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" style="width: 100%; height: 350px; object-fit: cover; border-radius: 10px;">
+                    <h6 style="color: #000;">Deuxième promotion</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="Albums/promotion2.html" class="btn" style="background-color: #ff0000; color: #fff;">Voir l'album</a>
+                </div>
+                <div class="col-lg-3 shadow" id="CourseBox" style="padding: 20px; width: 49%; margin-right: 20px; margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" style="width: 100%; height: 350px; object-fit: cover; border-radius: 10px;">
+                    <h6 style="color: #000;">Troisème promotion</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="Albums/promotion3.html" class="btn" style="background-color: #ff0000; color: #fff;">Voir l'album</a>
+                </div>
+                <div class="col-lg-3 shadow" id="CourseBox" style="padding: 20px; width: 49%; margin-bottom: 30px;">
+                    <img src="asset/images/Back.jpg" alt="" style="width: 100%; height: 350px; object-fit: cover; border-radius: 10px;">
+                    <h6 style="color: #000;">Quatrième promotion</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="Albums/promotion4.html" class="btn" style="background-color: #ff0000; color: #fff;">Voir l'album</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rejoindre" id="rejoindre">
+        <div class="container">
+            <h6>
+                Rejoignez dès maintenant la <br>
+                GET SKILLS CLASS, en un seul clique
+            </h6>
+            <a href="#" class="btn btnLogin-popup">Rejoindre</a>
+            <hr>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <img src="asset/images/logo_get_skills_class.png" alt="" width="100px">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#about">A propos</a></li>
+                        <li><a href="formations#">Formations</a></li>
+                        <li><a href="souvenirs#">Souvenir</a></li>
+                        <li><a href="#rejoindre">Rejoindre</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <hr>
+                <p>&copy; 2024 GET SKILLS CLASS, Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" class="btn btn-primary">&uparrow;</button>
+
+    <script>
+        let mybutton = document.getElementById("myBtn");
+
+        //Afficher le bouton retour en haut
+        window.onscroll = function(){scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // Lorsque l'utilisateur clique sur le bouton, retour en haut
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Ouvrir et fermer le formulaire d'inscription
+        const wrapper = document.querySelector('.wrapper');
+        const btnPopup = document.querySelector('.btnLogin-popup');
+        const iconClose = document.querySelector('.icon-close');
+
+        btnPopup.addEventListener('click', ()=> {
+            wrapper.classList.add('active-popup');
+        })
+
+        iconClose.addEventListener('click', ()=> {
+            wrapper.classList.remove('active-popup');
+        })
+
+        // Vérification du remplissage des champs et affichage de la boîte de dialogue
+        let formToSubmit = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Empêche l'envoi du formulaire
+
+                let form = event.target;
+                let allFilled = true;
+                let fields = form.querySelectorAll('input[type="text"], input[type="email"], input[type="date"]');
+
+                fields.forEach(function(field) {
+                    if (!field.value) {
+                        allFilled = false;
+                        field.style.borderColor = 'red'; // Met en évidence les champs non remplis
+                    } else {
+                        field.style.borderColor = ''; // Réinitialise la bordure si le champ est rempli
+                    }
+                });
+
+                if (allFilled) {
+                    formToSubmit = form;
+                    showAlert('Bravo ! Nous vous remercions pour votre inscription. \n nous restons ouvert pour toute vos préoccupation. \n Cliquez sur OK pour quitter');
+                } else {
+                    showAlert('Veuillez remplir tous les champs.');
+                }
+            });
+        });
+
+        function showAlert(message) {
+            document.getElementById('alertMessage').innerText = message;
+            document.getElementById('customAlert').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+            if (formToSubmit) {
+                formToSubmit.submit(); // Soumet le formulaire après la fermeture de l'alerte
+                formToSubmit = null;
+            }
+        }
+    </script>
+
+</body>
+</html>
