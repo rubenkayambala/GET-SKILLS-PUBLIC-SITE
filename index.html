@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="asset/style.css">
     <title>Get Skills CLass | Vitrine</title>
 </head>
-
-<style>
-
-    
-</style>
-
 <body>
     <div class="navbar">
         <div class="container">
@@ -43,12 +37,11 @@
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="#about">A propos</a></li>
-                        <li><a href="formations#">Formations</a></li>
-                        <li><a href="souvenirs#">Souvenir</a></li>
-                        <li><a href="#rejoindre">Rejoindre</a></li>
+                        <li><a href="#formations">Formations</a></li>
+                        <li><a href="#souvenirs">Souvenir</a></li>
                     </ul>
                 </div>
-                <a href="#" class="btn">Contact</a>
+                <a href="#message" class="btn">Contact</a>
             </nav>
         </div>
     </header>
@@ -61,17 +54,30 @@
         <button onclick="closeAlert()">OK</button>
     </div>
 
+    <div class="process">
+        <a href="#" class="icon-close" aria-label="icone close"><i class="bi bi-x"></i></a>
+        <div class="content">
+            <h2>Comment procéder</h2>
+            <p>Avez-vous suivi nos formations</p>
+            <a href="UserInterface/certificat/certif.html">Souscrire pour avoir le certificat</a>
+            <hr>
+            <p>Voulez-vous suivre une formation</p>
+            <a href="#" class="btn btnLogin-popup">S'inscrire</a>
+        </div>
+    </div>
+
     <section class="accueil" style="height: 84.1vh;">
         <div class="container">
             <h1>GET SKILLS <span style="color: #ff0000;">CLASS</span></h1>
-            <a href="#" class="btn btnLogin-popup">Rejoindre</a>
+            <p style="color: #fff;">
+                Rejoignez dès maintenant la GET SKILLS CLASS, en un seul clique
+            </p>
+            <a href="#" class="btn">Rejoindre</a>
         </div>
     </section>
 
     <div class="wrapper">
         <a href="#" class="icon-close" aria-label="icone close"><i class="bi bi-x"></i></a>
-            
-        </span>
         <div class="form-box" id="myForm">
             <h2>inscrivez-vous</h2>
             <p style="text-align: center; color: #000;">Suivez ces étapes pour rejoindre la GET SKILLS CLASS</p>
@@ -104,7 +110,7 @@
                     <input type="text" name="num" id="num" autocomplete="num" required>
                     <label for="num">Téléphone</label>
                 </div>
-                <button type="submit" class="btn">S'inscrire</button>
+                <button type="submit" class="btn Popup">S'inscrire</button>
             </form>
         </div>
     </div>
@@ -141,9 +147,8 @@
             </h3>
             <div class="row" style="padding: 20px 0;">
                 <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-left: 25px; margin-bottom: 30px;">
-                    <img src="asset/images/Back.jpg" alt="" width="100%">
-                    <div><h6>Niveau 1</h6></div>
-                    <h6>Titre</h6>
+                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-laptop"></i></p>
+                    <h6>Informatique Générale</h6>
                     <p>
                         Lorem ipsum dolor sit amet consectetur 
                         adipisicing elit. Soluta quam doloribus
@@ -153,9 +158,8 @@
                     <a href="#" class="btn">Suivre &rightarrow;</a>
                 </div>
                 <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-bottom: 30px;">
-                    <img src="asset/images/Back.jpg" alt="" width="100%">
-                    <div><h6>Niveau 2</h6></div>
-                    <h6>Titre</h6>
+                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-code-slash"></i></p>
+                    <h6>Programmation</h6>
                     <p>
                         Lorem ipsum dolor sit amet consectetur 
                         adipisicing elit. Soluta quam doloribus
@@ -165,9 +169,8 @@
                     <a href="#" class="btn">Suivre &rightarrow;</a>
                 </div>
                 <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-bottom: 30px;">
-                    <img src="asset/images/Back.jpg" alt="" width="100%">
-                    <div><h6>Niveau 3</h6></div>
-                    <h6>Titre</h6>
+                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-server"></i></p>
+                    <h6>Base de données</h6>
                     <p>
                         Lorem ipsum dolor sit amet consectetur 
                         adipisicing elit. Soluta quam doloribus
@@ -177,9 +180,8 @@
                     <a href="#" class="btn">Suivre &rightarrow;</a>
                 </div>
                 <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-left: 25px; margin-bottom: 30px;">
-                    <img src="asset/images/Back.jpg" alt="" width="100%">
-                    <div><h6>Niveau 4</h6></div>
-                    <h6>Titre</h6>
+                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-router"></i></p>
+                    <h6>Réseaux</h6>
                     <p>
                         Lorem ipsum dolor sit amet consectetur 
                         adipisicing elit. Soluta quam doloribus
@@ -189,9 +191,8 @@
                     <a href="#" class="btn">Suivre &rightarrow;</a>
                 </div>
                 <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-bottom: 30px;">
-                    <img src="asset/images/Back.jpg" alt="" width="100%">
-                    <div><h6>Niveau 5</h6></div>
-                    <h6>Titre</h6>
+                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-terminal"></i></p>
+                    <h6>Système</h6>
                     <p>
                         Lorem ipsum dolor sit amet consectetur 
                         adipisicing elit. Soluta quam doloribus
@@ -201,9 +202,8 @@
                     <a href="#" class="btn">Suivre &rightarrow;</a>
                 </div>
                 <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-bottom: 30px;">
-                    <img src="asset/images/Back.jpg" alt="" width="100%">
-                    <div><h6>Niveau 6</h6></div>
-                    <h6>Titre</h6>
+                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-keyboard"></i></p>
+                    <h6>Bureautique</h6>
                     <p>
                         Lorem ipsum dolor sit amet consectetur 
                         adipisicing elit. Soluta quam doloribus
@@ -213,6 +213,79 @@
                     <a href="#" class="btn">Suivre &rightarrow;</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <div class="banner">
+        <div class="container">
+            <div class="content">
+                <h3>+400</h3>
+                <p>Etudiants depuis nos debut en 2000</p>
+            </div>
+            <div>
+                <span></span>
+            </div>
+            <div class="content">
+                <h3>+40</h3>
+                <p>Formateurs dans nos centres</p>
+            </div>
+            <div>
+                <span></span>
+            </div>
+            <div class="content">
+                <h3>+50</h3>
+                <p>Programmes de formation en matière d'Informatique, marketing, autre</p>
+            </div>
+            <div>
+                <span></span>
+            </div>
+            <div class="content">
+                <h3>95%</h3>
+                <p>Etudiants qui ont obtenu un emploi ou une oppotunité</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="programme">
+        <div class="container">
+            <h3 style="text-align: center; margin-top: 100px;">
+                S'enrichire avec nos programmes
+                <div></div>
+            </h3>
+            <div class="row" style="padding: 20px 0;">
+                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-left: 25px; margin-bottom: 30px;">
+                    <img src="asset/images/GETS SKILLS CLASS FIST STAGE-70.jpg" alt="" width="100%">
+                    <h6>Maintenance</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-bottom: 30px;">
+                    <img src="asset/images/GETS SKILLS CLASS FIST STAGE-70.jpg" alt="" width="100%">
+                    <h6>Programmation</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-bottom: 30px;">
+                    <img src="asset/images/GETS SKILLS CLASS FIST STAGE-70.jpg" alt="" width="100%">
+                    <h6>Réseaux & Base de données</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Soluta quam doloribus
+                        porro, suscipit reprehenderit vitae
+                        magnam eligendi rerum.
+                    </p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
         </div>
     </section>
 
@@ -227,10 +300,7 @@
                     <img src="asset/images/Back.jpg" alt="" style="width: 100%; height: 350px; object-fit: cover; border-radius: 10px;">
                     <h6 style="color: #000;">Première promotion</h6>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
+                        Les souvenirs de notre première promotion
                     </p>
                     <a href="Albums/promotion1.html" class="btn" style="background-color: #ff0000; color: #fff;">Voir l'album</a>
                 </div>
@@ -238,10 +308,7 @@
                     <img src="asset/images/Back.jpg" alt="" style="width: 100%; height: 350px; object-fit: cover; border-radius: 10px;">
                     <h6 style="color: #000;">Deuxième promotion</h6>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
+                        Les souvenirs de notre deuxième promotion
                     </p>
                     <a href="Albums/promotion2.html" class="btn" style="background-color: #ff0000; color: #fff;">Voir l'album</a>
                 </div>
@@ -249,10 +316,7 @@
                     <img src="asset/images/Back.jpg" alt="" style="width: 100%; height: 350px; object-fit: cover; border-radius: 10px;">
                     <h6 style="color: #000;">Troisème promotion</h6>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
+                        Les souvenirs de notre troisième promotion
                     </p>
                     <a href="Albums/promotion3.html" class="btn" style="background-color: #ff0000; color: #fff;">Voir l'album</a>
                 </div>
@@ -260,10 +324,7 @@
                     <img src="asset/images/Back.jpg" alt="" style="width: 100%; height: 350px; object-fit: cover; border-radius: 10px;">
                     <h6 style="color: #000;">Quatrième promotion</h6>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
+                        Les souvenirs de notre quatrième promotion
                     </p>
                     <a href="Albums/promotion4.html" class="btn" style="background-color: #ff0000; color: #fff;">Voir l'album</a>
                 </div>
@@ -271,37 +332,44 @@
         </div>
     </section>
 
-    <section class="rejoindre" id="rejoindre">
+    <section class="message" id="message">
         <div class="container">
-            <h6>
-                Rejoignez dès maintenant la <br>
-                GET SKILLS CLASS, en un seul clique
-            </h6>
-            <a href="#" class="btn btnLogin-popup">Rejoindre</a>
-            <hr>
+            <div class="form-box">
+                <h2>Envoyer un message</h2>
+                <p>Suivez ces étapes pour nous envoyer un message</p>
+                <form action="#">
+                    <div class="input-box"> 
+                        <input type="text" name="name" id="name" autocomplete="name" required>
+                        <label for="name">Nom</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="first" id="first" autocomplete="first" required>
+                        <label for="first">Prénom</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" id="email" autocomplete="email" required>
+                        <label for="email">Adresse Email</label>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="message" id="message" autocomplete="email" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn Popup">Envoyer un message</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="row">
-                <div>
-                    <img src="asset/images/logo_get_skills_class.png" alt="" width="100px">
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="#about">A propos</a></li>
-                        <li><a href="formations#">Formations</a></li>
-                        <li><a href="souvenirs#">Souvenir</a></li>
-                        <li><a href="#rejoindre">Rejoindre</a></li>
-                    </ul>
-                    <ul>
+            <div class="final">
+                <ul>
                         <li><a href="#"><i class="bi bi-facebook"></i></a></li>
                         <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
                         <li><a href="#"><i class="bi bi-instagram"></i></a></li>
                         <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    </ul>
-                </div>
-                <hr>
+                </ul>
+                <hr style="height: 1px; color: #fff; width: 100%;">
                 <p>&copy; 2024 GET SKILLS CLASS, Tous droits réservés.</p>
             </div>
         </div>
@@ -331,7 +399,7 @@
 
         // Ouvrir et fermer le formulaire d'inscription
         const wrapper = document.querySelector('.wrapper');
-        const btnPopup = document.querySelector('.btnLogin-popup');
+        const btnPopup = document.querySelector('.Popup');
         const iconClose = document.querySelector('.icon-close');
 
         btnPopup.addEventListener('click', ()=> {
@@ -340,6 +408,19 @@
 
         iconClose.addEventListener('click', ()=> {
             wrapper.classList.remove('active-popup');
+        })
+
+        // Ouvrir et fermer le formulaire d'inscription
+        const process = document.querySelector('.process');
+        const Popup = document.querySelector('.btnLogin-popup');
+        const Close = document.querySelector('.close');
+
+        btnPopup.addEventListener('click', ()=> {
+            process.classList.add('active-popup');
+        })
+
+        iconClose.addEventListener('click', ()=> {
+            process.classList.remove('active-popup');
         })
 
         // Vérification du remplissage des champs et affichage de la boîte de dialogue

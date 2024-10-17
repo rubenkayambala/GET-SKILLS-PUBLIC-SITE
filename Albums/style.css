@@ -77,55 +77,179 @@ header nav .btn{
     padding: 10px 20px;
 }
 
-.rejoindre{
-    background-color: #333;
+.accueil{
+    height: 80vh;
+    padding: 30px 0;
+    margin-bottom: 50px;
 }
 
-.rejoindre .container{
-    padding: 20px 0;
+.accueil .container .content .carousel{
+    margin-top: 30px;
+    width: 55%;
+    margin-left: 280px;
+}
+
+.accueil .container .content .carousel img{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.accueil .container .content .carousel button{
+    background-color: #0051ff79;
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    padding: 10px;
+    margin: 30px 0;
+    margin-top: 30%;
+}
+
+.accueil .container{
+    padding: 20px 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.imagespromo{
+    background-image: url(../asset/images/Back_One.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #000000c0;
     text-align: center;
 }
 
-.rejoindre .container h6{
-    font-size: 35px;
-    color: #fff;
+.imagespromo .container{
+    padding: 50px 0;
 }
 
-.rejoindre .container .btn{
-    background-color: #ff0000;
-    color: #fff;
+.imagespromo .container .row div{
+    background-color: #ffffff15;
+    padding: 20px;
+    width: 310px;
+    margin-right: 20px;
 }
 
-hr{
-    color: #f5f5f5;
+.imagespromo .container .row div img{
+    width: 100%;
+}
+
+.examsperiode .container{
+    padding: 50px 0;
+}
+
+.examsperiode .container .row div{
+    background-color: #ffffff15;
+    padding: 20px;
+    width: 310px;
+    margin-right: 20px;
+}
+
+.examsperiode .container .row div img{
+    width: 100%;
+}
+
+.stage{
+    background-image: url(../asset/images/Back_One.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #000000c0;
+    text-align: center;
+}
+
+.stage .container{
+    padding: 50px 0;
+}
+
+.stage .container .row div{
+    background-color: #ffffff15;
+    padding: 20px;
+}
+
+.stage .container .row div img{
+    width: 100%;
+}
+
+.defense .container{
+    padding: 50px 0;
+}
+
+.defense .container .row div{
+    background-color: #ffffff15;
+    padding: 20px;
+    width: 425px;
+    margin-right: 20px;
+}
+
+.defense .container .row div img{
+    width: 100%;
+}
+
+.fincours{
+    background-image: url(../asset/images/Back_One.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #000000c0;
+    text-align: center;
+}
+
+.fincours .container{
+    padding: 50px 0;
+}
+
+.fincours .container .row div{
+    background-color: #ffffff15;
+    padding: 20px;
+    width: 425px;
+    margin-right: 20px;
+}
+
+.fincours .container .row div img{
+    width: 100%;
 }
 
 footer{
     background-color: #333;
 }
 
-footer .container .row p{
+footer .container p{
     color: #f5f5f5;
     text-align: center;
 }
 
-footer .container .row div{
+footer .container{
+    padding: 20px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
 }
 
-footer .container .row div ul{
+footer .container div ul{
     display: flex;
+    margin-top: 15px;
 }
 
-footer .container .row div ul li{
+footer .container div ul li{
     list-style: none;
     margin-left: 20px;
 }
 
-footer .container .row div ul li a{
+footer .container div ul li a{
     text-decoration: none;
     font-size: 18px;
+    color: #fff;
+}
+
+footer button{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #0051ff;
     color: #fff;
 }
