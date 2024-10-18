@@ -207,7 +207,7 @@ h3 div{
     background-size: cover;
     background-blend-mode: multiply;
     background-color: #000000d3;
-    height: 54vh;
+    height: 50vh;
 }
 
 .formations .container .row #CourseBox{
@@ -273,7 +273,7 @@ h3 div{
     width: 75%; 
     height: 120px; 
     border-radius: 30px; 
-    top: 106em;
+    top: 103.5em;
     left: 180px;
     display: flex; 
     justify-content: space-between; 
@@ -296,6 +296,42 @@ h3 div{
     border-right: 1px solid #ff0000; 
     margin: 0px 15px; 
     display: block;
+}
+
+/* Programmes */
+.programme .container h3{
+    text-align: center; 
+    margin-top: 100px;
+}
+
+.programme .container .row{
+    padding: 20px 0;
+}
+
+.programme .container .row #CourseBox{
+    padding: 20px; 
+    width: 45.5%; 
+    margin-right: 30px; 
+    margin-left: 25px; 
+    margin-bottom: 30px;
+}
+
+.programme .container .row #CourseBox .niv{
+    background-color: #ff0000; 
+    width: 100px; 
+    padding: 0 5px; 
+    position: absolute; 
+    left: 35%; 
+    top: 140em; 
+    border-radius: 5px; 
+    text-align: center; 
+    box-shadow: 0 0 5px #000;
+}
+
+.programme .container .row #CourseBox .niv p{
+    color: #fff; 
+    margin-top: 5px; 
+    margin-bottom: 5px;
 }
 
 /* Style de la section rejoindre */
