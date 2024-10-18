@@ -8,6 +8,135 @@
     <link rel="stylesheet" href="asset/style.css">
     <title>Get Skills CLass | Vitrine</title>
 </head>
+<style>
+    .process{
+        display: none;
+        width: 450px;
+        background-color: #fff;
+        border-radius: 20px;
+        left: 35%;
+        top: 35%;
+        padding: 40px;
+        box-shadow: 0 0 10px #000;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: transform .5s ease ,height .2s ease;
+    }
+
+    .process .content{
+        text-align: center;
+    }
+
+    .process .content h2{
+        text-align: center;
+        color: #000;
+    }
+
+    .process .content a{
+        background-color: #ff0000;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .process .icon-close{
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        background: #ff0000;
+        font-size: 2em;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .wrapper.active-popup, .process.active-process {
+        display: block;
+        /* Autres styles pour l'affichage actif */
+    }
+    .input-box {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .input-box input {
+        width: 100%;
+        padding: 10px;
+        background: none;
+        border: 1px solid #ccc;
+        outline: none;
+        color: #000;
+    }
+    .input-box label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        pointer-events: none;
+        transition: 0.5s;
+        color: #aaa;
+    }
+    .input-box input:focus ~ label,
+    .input-box input:valid ~ label {
+        top: -20px;
+        left: 10px;
+        color: #000;
+        font-size: 12px;
+    }
+</style>
+<div class="process">
+    <a href="#" class="icon-close" aria-label="icone close"><i class="bi bi-x"></i></a>
+    <div class="content">
+        <h2>Comment procéder</h2>
+        <p>Avez-vous suivi nos formations</p>
+        <a href="UserInterface/certificat/certif.html">Souscrire pour avoir le certificat</a>
+        <hr>
+        <p>Voulez-vous suivre une formation</p>
+        <a href="#" class="btnLoginPopup">S'inscrire</a>
+    </div>
+</div>
+<div class="wrapper">
+    <a href="#" class="icon-close" aria-label="icone close"><i class="bi bi-x"></i></a>
+    <div class="form-box" id="myForm">
+        <h2>inscrivez-vous</h2>
+        <p style="text-align: center; color: #000;">Suivez ces étapes pour rejoindre la GET SKILLS CLASS</p>
+        <form action="#">
+            <div class="input-box"> 
+                <input type="text" name="name" id="name" autocomplete="name" required placeholder="Votre nom">
+                <label for="name">Nom</label>
+            </div>
+            <div class="input-box"> 
+                <input type="text" name="midname" id="midname" autocomplete="midname" required placeholder="Votre post-nom">
+                <label for="midname">Post-nom</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="first" id="first" autocomplete="first" required placeholder="Votre prénom">
+                <label for="first">Prénom</label>
+            </div>
+            <div class="input-box"> 
+                <input type="date" name="birth" id="birth" autocomplete="birth" required placeholder="Votre date de naissance">
+                <label for="birth">Date de naissance</label>
+            </div>
+            <div class="input-box"> 
+                <input type="text" name="adresse" id="adresse" autocomplete="adresse" required placeholder="Votre résidence">
+                <label for="adresse">Adresse actuelle</label> 
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" id="email" autocomplete="email" required placeholder="Votre adresse mail">
+                <label for="email">Adresse Email</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="num" id="num" autocomplete="num" required placeholder="Votre numéro de téléphone">
+                <label for="num">Téléphone</label>
+            </div>
+            <button type="submit" class="btn btnLogin-popup">S'inscrire</button>
+        </form>
+    </div>
+</div>
 <body>
     <div class="navbar">
         <div class="container">
@@ -54,66 +183,27 @@
         <button onclick="closeAlert()">OK</button>
     </div>
 
-    <div class="process">
-        <a href="#" class="icon-close" aria-label="icone close"><i class="bi bi-x"></i></a>
-        <div class="content">
-            <h2>Comment procéder</h2>
-            <p>Avez-vous suivi nos formations</p>
-            <a href="UserInterface/certificat/certif.html">Souscrire pour avoir le certificat</a>
-            <hr>
-            <p>Voulez-vous suivre une formation</p>
-            <a href="#" class="btn btnLogin-popup">S'inscrire</a>
-        </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="dialogue" id="dialogue">
+        <h2>Notification</h2>
+        <hr>
+        <p>
+            Assurez vous d'être inscrit(e) pour pouvoir suivre ce cours.
+            Cliquez sur <span>Rejoindre</span> pour vous inscrire.
+            Cliquez sur OK pour quitter
+        </p>
+        <button onclick="fermerBoiteDeDialogue()">OK</button>
     </div>
 
     <section class="accueil" style="height: 84.1vh;">
         <div class="container">
             <h1>GET SKILLS <span style="color: #ff0000;">CLASS</span></h1>
             <p style="color: #fff;">
-                Rejoignez dès maintenant la GET SKILLS CLASS, en un seul clique
+                EXPLORER LES TECHNOLOGIE DE L'INFORMATION ET DE LA COMMUNICATION 
             </p>
-            <a href="#" class="btn">Rejoindre</a>
+            <button class="btnJoin">Rejoindre</button>
         </div>
     </section>
-
-    <div class="wrapper">
-        <a href="#" class="icon-close" aria-label="icone close"><i class="bi bi-x"></i></a>
-        <div class="form-box" id="myForm">
-            <h2>inscrivez-vous</h2>
-            <p style="text-align: center; color: #000;">Suivez ces étapes pour rejoindre la GET SKILLS CLASS</p>
-            <form action="#">
-                <div class="input-box"> 
-                    <input type="text" name="name" id="name" autocomplete="name" required>
-                    <label for="name">Nom</label>
-                </div>
-                <div class="input-box"> 
-                    <input type="text" name="midname" id="midname" autocomplete="midname" required>
-                    <label for="midname">Post-nom</label>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="first" id="first" autocomplete="first" required>
-                    <label for="first">Prénom</label>
-                </div>
-                <div class="input-box"> 
-                    <input type="date" name="birth" id="birth" autocomplete="birth" required>
-                    <label for="birth">Date de naissance</label>
-                </div>
-                <div class="input-box"> 
-                    <input type="text" name="adresse" id="adresse" autocomplete="adresse" required>
-                    <label for="adresse">Adresse actuelle</label> 
-                </div>
-                <div class="input-box">
-                    <input type="email" name="email" id="email" autocomplete="email" required>
-                    <label for="email">Adresse Email</label>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="num" id="num" autocomplete="num" required>
-                    <label for="num">Téléphone</label>
-                </div>
-                <button type="submit" class="btn Popup">S'inscrire</button>
-            </form>
-        </div>
-    </div>
 
     <section class="about" id="about">
         <div class="container">
@@ -126,12 +216,12 @@
                     <img src="asset/images/logo_get_skills_class.png" alt="">
                 </div>
                 <div class="col-lg-6 infos">
-                    <h5>Qui sommes nous ?</h5>
+                    <h5>GET SKILLS CLASS</h5>
                     <p>
-                        <strong>GET SKILLS CLASS</strong> est un centre de Formations <br>
-                        professionnel fondé pour former et accompagner les jeunes dans <br>
-                        le domaine des Nouvelles Technologies de l'Information et de la <br>
-                        Communication. 
+                        Lancée pour répondre aux besoins croissants du secteur éducatif,
+	                    GET SKILLS Class se distingue par son approche intégrée, combinant 
+                        théorie et pratique pour préparer les apprenants aux défis de leurs 
+                        secteurs respectifs.
                     </p>
                     <a href="#" class="btn">En savoir plus</a>
                 </div>
@@ -146,73 +236,40 @@
                 <div></div>
             </h3>
             <div class="row" style="padding: 20px 0;">
-                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-left: 25px; margin-bottom: 30px;">
-                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-laptop"></i></p>
+                <div class="col-lg-3 bg-light shadow" id="CourseBox">
+                    <p class="icon"><i class="bi bi-laptop"></i></p>
                     <h6>Informatique Générale</h6>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
-                    </p>
-                    <a href="#" class="btn">Suivre &rightarrow;</a>
                 </div>
-                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-bottom: 30px;">
-                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-code-slash"></i></p>
-                    <h6>Programmation</h6>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
-                    </p>
-                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                <div class="col-lg-3 bg-light shadow" id="CourseBox">
+                    <p class="icon"><i class="bi bi-code-slash"></i></p>
+                    <h6 style="text-align: center;">Programmation</h6>
                 </div>
-                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-bottom: 30px;">
-                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-server"></i></p>
-                    <h6>Base de données</h6>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
-                    </p>
-                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                <div class="col-lg-3 bg-light shadow" id="CourseBox">
+                    <p class="icon"><i class="bi bi-server"></i></p>
+                    <h6 style="text-align: center;">Base de données</h6>
                 </div>
-                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-left: 25px; margin-bottom: 30px;">
-                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-router"></i></p>
-                    <h6>Réseaux</h6>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
-                    </p>
-                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                <div class="col-lg-3 bg-light shadow" id="CourseBox">
+                    <p class="icon"><i class="bi bi-router"></i></p>
+                    <h6 style="text-align: center;">Réseaux</h6>
                 </div>
-                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-bottom: 30px;">
-                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-terminal"></i></p>
-                    <h6>Système</h6>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
-                    </p>
-                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                <div class="col-lg-3 bg-light shadow" id="CourseBox">
+                    <p class="icon"><i class="bi bi-terminal"></i></p>
+                    <h6 style="text-align: center;">Système & administration</h6>               
                 </div>
-                <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-bottom: 30px;">
-                    <p style="font-size: 100px; text-align: center; color: #970000;"><i class="bi bi-keyboard"></i></p>
-                    <h6>Bureautique</h6>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Soluta quam doloribus
-                        porro, suscipit reprehenderit vitae
-                        magnam eligendi rerum.
-                    </p>
-                    <a href="#" class="btn">Suivre &rightarrow;</a>
+                <div class="col-lg-3 bg-light shadow" id="CourseBox">
+                    <p class="icon"><i class="bi bi-keyboard"></i></p>
+                    <h6 style="text-align: center;">Bureautique</h6>
+                </div>
+                <div class="col-lg-3 bg-light shadow" id="CourseBox">
+                    <p class="icon"><i class="bi bi-terminal"></i></p>
+                    <h6 style="text-align: center;">Système & administration</h6>               
+                </div>
+                <div class="col-lg-3 bg-light shadow" id="CourseBox">
+                    <p class="icon"><i class="bi bi-keyboard"></i></p>
+                    <h6 style="text-align: center;">Bureautique</h6>
                 </div>
             </div>
+            <a href="#">Voir notre catalogue des formations</a>
         </div>
     </section>
 
@@ -249,7 +306,7 @@
     <section class="programme">
         <div class="container">
             <h3 style="text-align: center; margin-top: 100px;">
-                S'enrichire avec nos programmes
+                Avoir un aperçu sur nos cours
                 <div></div>
             </h3>
             <div class="row" style="padding: 20px 0;">
@@ -262,7 +319,7 @@
                         porro, suscipit reprehenderit vitae
                         magnam eligendi rerum.
                     </p>
-                    <a href="#" class="btn">En savoir plus</a>
+                    <a href="#" class="btn" onclick="afficherBoiteDeDialogue()">Suivre</a>
                 </div>
                 <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-right: 30px; margin-bottom: 30px;">
                     <img src="asset/images/GETS SKILLS CLASS FIST STAGE-70.jpg" alt="" width="100%">
@@ -273,7 +330,7 @@
                         porro, suscipit reprehenderit vitae
                         magnam eligendi rerum.
                     </p>
-                    <a href="#" class="btn">En savoir plus</a>
+                    <a href="#" class="btn" onclick="afficherBoiteDeDialogue()">Suivre</a>
                 </div>
                 <div class="col-lg-4 bg-light shadow" id="CourseBox" style="padding: 20px; width: 30%; margin-bottom: 30px;">
                     <img src="asset/images/GETS SKILLS CLASS FIST STAGE-70.jpg" alt="" width="100%">
@@ -284,7 +341,7 @@
                         porro, suscipit reprehenderit vitae
                         magnam eligendi rerum.
                     </p>
-                    <a href="#" class="btn">En savoir plus</a>
+                    <a href="#" class="btn" onclick="afficherBoiteDeDialogue()">Suivre</a>
                 </div>
         </div>
     </section>
@@ -354,7 +411,7 @@
                         <textarea name="message" id="message" autocomplete="email" required></textarea>
                         <label for="message">Message</label>
                     </div>
-                    <button type="submit" class="btn Popup">Envoyer un message</button>
+                    <button type="submit" class="btn">Envoyer un message</button>
                 </form>
             </div>
         </div>
@@ -398,30 +455,26 @@
         }
 
         // Ouvrir et fermer le formulaire d'inscription
-        const wrapper = document.querySelector('.wrapper');
-        const btnPopup = document.querySelector('.Popup');
-        const iconClose = document.querySelector('.icon-close');
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.wrapper');
+            const process = document.querySelector('.process');
+            const btnJoin = document.querySelector('.btnJoin');
+            const btnPopup = document.querySelector('.btnLoginPopup');
+            const iconClose = document.querySelector('.icon-close');
 
-        btnPopup.addEventListener('click', ()=> {
-            wrapper.classList.add('active-popup');
-        })
+            btnJoin.addEventListener('click', () => {
+                process.classList.add('active-process');
+            });
 
-        iconClose.addEventListener('click', ()=> {
-            wrapper.classList.remove('active-popup');
-        })
+            btnPopup.addEventListener('click', () => {
+                wrapper.classList.add('active-popup');
+                process.classList.remove('active-process')
+            });
 
-        // Ouvrir et fermer le formulaire d'inscription
-        const process = document.querySelector('.process');
-        const Popup = document.querySelector('.btnLogin-popup');
-        const Close = document.querySelector('.close');
-
-        btnPopup.addEventListener('click', ()=> {
-            process.classList.add('active-popup');
-        })
-
-        iconClose.addEventListener('click', ()=> {
-            process.classList.remove('active-popup');
-        })
+            iconClose.addEventListener('click', () => {
+                wrapper.classList.remove('active-popup');
+            });
+        });
 
         // Vérification du remplissage des champs et affichage de la boîte de dialogue
         let formToSubmit = null;
@@ -445,7 +498,7 @@
 
                 if (allFilled) {
                     formToSubmit = form;
-                    showAlert('Bravo ! Nous vous remercions pour votre inscription. \n nous restons ouvert pour toute vos préoccupation. \n Cliquez sur OK pour quitter');
+                    showAlert('Bravo ! Nous vous remercions pour votre inscription. \n Nous avons envoyé un message de confirmation dans votre mail. \n Cliquez sur OK pour quitter');
                 } else {
                     showAlert('Veuillez remplir tous les champs.');
                 }
@@ -465,6 +518,17 @@
                 formToSubmit.submit(); // Soumet le formulaire après la fermeture de l'alerte
                 formToSubmit = null;
             }
+        }
+
+        // Message pour les utilisateurs non inscrits
+        function afficherBoiteDeDialogue() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('dialogue').style.display = 'block';
+        }
+
+        function fermerBoiteDeDialogue() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('dialogue').style.display = 'none';
         }
     </script>
 
